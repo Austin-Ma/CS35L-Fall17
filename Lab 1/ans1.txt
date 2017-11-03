@@ -1,0 +1,81 @@
+1.) apropos man OR man -k keyword, which is man -k man in the case of this question
+
+2.) which cp, The file is located in /usr/bin/cp. which wc, the file is located in /uxr/bin/wc
+
+3.) We can cd to the /bin directory, and then use "echo?" to find the commands with one character using cd/usr/bin and echo? The two programs are "[" and "w". Using whatis [ we see that "[" checks file types and compares values. Using whatis w, we see that "w" shows who is logged on and what they are doing
+
+4.) We cd into /usr/bin, and then use ls -l grep emacs. This gives us the files related to emacs and the symbollic link liking to /etc/alternatives/emacs
+
+5.) g stands for user/groups/ g+s gives the user accessing the file, the permission of a group for that file. o stands for other. o-x removes the executable permission for others in the specified file. The answer can be found using man find
+
+6.) Find -mtime -21 will give us the files modified in the past 3 weeks (21 days). We can use man find to look up the appropriate flags for this
+
+7.) Find -mtime -21 -type d will give us all of the files modified in the past 3 weeks (21 days). Note the difference between -ctime and -mtime. -ctime gives us the time it was changed (content OR attributes). -mtime gives us the time the contents has been changed (CONTENT ONLY). So... if you change a read/write attribute of a file, it will only alter the ctime of a file
+
+8.) Which find (This tells us the directory "find" is in). Find /usr/bin/ -type l . We can see that 287 of the files in the directory are symbolic links
+
+9.) cd /usr/lib , ls -lta (The a flag lists all files, including those that start with "." t sorts by time modification. l provides information beyond file name.
+
+10.) locale gets its data from localedef. We run man -k locale and see in the description that locale def is responsible for "compiling locale definition files.: This information summarizes the current locale environment, and summarizes each locale category defined by the LC _ * environment variables. The files themselves are stored in the directory /usr/share/locale
+
+11.) emacs, C-h, a sort
+Buffer-menu-sort              M-x ... RET
+   Sort Tabulated List entries by the column at point.
+sort-columns                  M-x ... RET
+   Sort lines in region alphabetically by a certain range of columns.
+sort-fields                   M-x ... RET
+   Sort lines in region lexicographically by the ARGth field of each
+   line.
+sort-lines                    M-x ... RET
+   Sort lines in region alphabetically; argument means descending
+   order.
+sort-numeric-fields           M-x ... RET
+   Sort lines in region numerically by the ARGth field of each line.
+sort-pages                    M-x ... RET
+   Sort pages in region alphabetically; argument means descending
+   order.
+sort-paragraphs               M-x ... RET
+   Sort paragraphs in region alphabetically; argument means descending
+   order.
+sort-regexp-fields            M-x ... RET
+   Sort the text in the region region lexicographically.
+tabulated-list-col-sort       M-x ... RET
+   Sort Tabulated List entries by the column of the mouse click E.
+tabulated-list-sort           M-x ... RET
+   Sort Tabulated List entries by the column at point.
+
+12.) C-M-a moves to the beginning of the current defun (function) or to the preceding defun. C-M-h places a mark at the end of the current defun, pointing at beginning. 
+
+13.) C-g cancels the current command. If you are listing / searching for something and want to abort, C-g cancels the currently running command
+
+14.) C-h f yank Yank is bound to C-y. It reinserts the last stretch of killed text
+
+15.) Dired yields the following
+Buffer-menu-sort              M-x ... RET
+   Sort Tabulated List entries by the column at point.
+sort-columns                  M-x ... RET
+   Sort lines in region alphabetically by a certain range of columns.
+sort-fields                   M-x ... RET
+   Sort lines in region lexicographically by the ARGth field of each
+   line.
+sort-lines                    M-x ... RET
+   Sort lines in region alphabetically; argument means descending
+   order.
+sort-numeric-fields           M-x ... RET
+   Sort lines in region numerically by the ARGth field of each line.
+sort-pages                    M-x ... RET
+   Sort pages in region alphabetically; argument means descending
+   order.
+sort-paragraphs               M-x ... RET
+   Sort paragraphs in region alphabetically; argument means descending
+   order.
+sort-regexp-fields            M-x ... RET
+   Sort the text in the region region lexicographically.
+tabulated-list-col-sort       M-x ... RET
+   Sort Tabulated List entries by the column of the mouse click E.
+tabulated-list-sort           M-x ... RET
+   Sort Tabulated List entries by the column at point.
+
+Ls -l  yields a shorter list (certain files are omitted)
+
+
